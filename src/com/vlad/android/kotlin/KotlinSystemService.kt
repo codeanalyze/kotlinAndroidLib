@@ -18,7 +18,7 @@ import android.app.UiModeManager
 import android.app.DownloadManager
 import android.media.AudioManager
 
-public inline fun Context.getSystemServiceAs<T>(name: String): T? = getSystemService(name) as? T
+public inline fun Context.getSystemServiceAs<T>(name: String): T = getSystemService(name) as T
 
 public inline fun Context.getWindowService(): WindowManager? = getSystemServiceAs(Context.WINDOW_SERVICE)
 public inline fun Context.getLayoutInflaterService(): LayoutInflater? = getSystemServiceAs(Context.LAYOUT_INFLATER_SERVICE)

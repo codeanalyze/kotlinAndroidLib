@@ -10,7 +10,7 @@ public inline fun Intent(body: Intent.() -> Unit): Intent {
     return intent
 }
 
-public inline fun Intent(o: Intent?, body: Intent.() -> Unit): Intent {
+public inline fun Intent(o: Intent, body: Intent.() -> Unit): Intent {
     val intent = Intent(o)
     intent.body()
     return intent

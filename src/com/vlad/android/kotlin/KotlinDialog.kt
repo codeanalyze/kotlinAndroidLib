@@ -12,7 +12,7 @@ import android.widget.ListAdapter
 
 public inline fun dialogOnClickListener(action: (dialog: DialogInterface?, which: Int) -> Unit): OnClickListener {
     return object : OnClickListener {
-        public override fun onClick(p0: DialogInterface?, p1: Int) = action(p0, p1)
+        public override fun onClick(p0: DialogInterface, p1: Int) = action(p0, p1)
     }
 }
 public inline fun dialogOnCancelListener(action: (dialog: DialogInterface?) -> Unit): OnCancelListener {
